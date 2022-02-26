@@ -37,6 +37,12 @@ public class PostWithArrayListandHashMap {
 
         response.then().statusCode(201);
 
+        Response response2 = given().contentType(ContentType.JSON).get("http://localhost:8080/api/users");
+
+        response2.prettyPrint();
+
+        response2.then().statusCode(200);
+
 
     }
 }
