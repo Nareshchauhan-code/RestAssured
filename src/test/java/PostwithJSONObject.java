@@ -19,6 +19,7 @@ public class PostwithJSONObject {
 
         JSONObject object = new JSONObject();
 
+
         object.put("email","aryanchauhan@gmail.com");
         object.put("firstName","Aryan");
         object.put("lastName","Chauhan");
@@ -44,7 +45,6 @@ public class PostwithJSONObject {
         response.then().statusCode(201);
 
         Response response2 = given().contentType(ContentType.JSON).get("http://localhost:8080/api/users");
-
         response2.prettyPrint();
 
         response2.then().statusCode(200);
